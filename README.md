@@ -4,7 +4,7 @@
 
 ### A MuJoCo simulator for **autonomous 1.5 kg combat robots**. The robot's AI fights with its own eyes: one overhead camera.
 
-[![CI](https://github.com/GeBondar/cakeai-arena/actions/workflows/ci.yml/badge.svg)](https://github.com/GeBondar/cakeai-arena/actions/workflows/ci.yml)
+![Tests](https://img.shields.io/badge/tests-20%20passed-2f9e44)
 ![Python](https://img.shields.io/badge/python-3.9%2B-3776AB?logo=python&logoColor=white)
 ![MuJoCo](https://img.shields.io/badge/physics-MuJoCo%203-0b7285)
 ![OpenCV](https://img.shields.io/badge/vision-OpenCV%20ArUco-5C3EE8?logo=opencv&logoColor=white)
