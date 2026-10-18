@@ -91,15 +91,14 @@ class Match:
                 if n.startswith(s + "_"):
                     self.owner[i] = k
         self.wkind, self.wdof = {}, {}
-        M = np.zeros((self.m.nv, self.m.nv))
-        mujoco.mj_fullM(self.m, M, self.d.qM)
         for s, robot in (("r0", "cake"), ("r1", opp.robot)):
             w = self.cat[robot]["weapon"]
             self.wkind[s] = w["kind"] if w else None
             if w:
                 self.isweap[self.wbody[s]] = True
                 dof = self.m.jnt_dofadr[mujoco.mj_name2id(self.m, mujoco.mjtObj.mjOBJ_JOINT, f"{s}_weapon_j")]
-                self.wdof[s] = (dof, M[dof, dof])
+                # rotor inertia about its axis (leaf hinge -> configuration-independent; works on all MuJoCo 3.x)
+                self.wdof[s] = (dof, float(self.m.dof_M0[dof]))
         self.flip_angle = math.radians(self.cat[opp.robot]["weapon"]["range_deg"]) if self.wkind["r1"] == "flipper" else 0.0
         self.sides = {"r0": Side("CakeAI", "cake"), "r1": Side(opp.name, opp.robot)}
         self.in_contact = {(s, k): False for s in self.SLOTS for k in "wb"}
