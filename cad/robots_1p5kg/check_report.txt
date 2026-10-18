@@ -1,0 +1,67 @@
+Self-check: 1.5 kg robots (CADAM / CadQuery)
+
+== cake: CakeAI (Tort II) — invertible drum spinner
+  chassis  m=1.030 kg  V=   834.8 cm3  bbox=196x196x50
+  drum     m=0.250 kg  V=   142.8 cm3  bbox=52x120x40
+  wheel_l  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  wheel_r  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  TOTAL 1.500 kg (limit 1.5 kg) -> OK
+  envelope 206 x 196 x 64 mm; lowest non-wheel point 6.9 mm above the floor -> OK
+  chassis ∩ drum = 0.0 mm3  OK
+  chassis ∩ wheel_l = 0.0 mm3  OK
+  chassis ∩ wheel_r = 0.0 mm3  OK
+  drum ∩ wheel_l = 0.0 mm3  OK
+  drum ∩ wheel_r = 0.0 mm3  OK
+  wheel_l ∩ wheel_r = 0.0 mm3  OK
+
+== vspin: Vertical disc spinner
+  chassis  m=1.000 kg  V=   498.7 cm3  bbox=205x150x79
+  disk     m=0.280 kg  V=    70.5 cm3  bbox=116x36x100
+  wheel_l  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  wheel_r  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  TOTAL 1.500 kg (limit 1.5 kg) -> OK
+  envelope 248 x 150 x 116 mm; lowest non-wheel point 2.0 mm above the floor -> OK
+  chassis ∩ disk = 0.0 mm3  OK
+  chassis ∩ wheel_l = 0.0 mm3  OK
+  chassis ∩ wheel_r = 0.0 mm3  OK
+  disk ∩ wheel_l = 0.0 mm3  OK
+  disk ∩ wheel_r = 0.0 mm3  OK
+  wheel_l ∩ wheel_r = 0.0 mm3  OK
+
+== hspin: Horizontal bar spinner (undercutter)
+  chassis  m=0.990 kg  V=   705.8 cm3  bbox=238x160x46
+  bar      m=0.290 kg  V=    43.7 cm3  bbox=170x44x24
+  wheel_l  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  wheel_r  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  TOTAL 1.500 kg (limit 1.5 kg) -> OK
+  envelope 307 x 160 x 64 mm; lowest non-wheel point 6.0 mm above the floor -> OK
+  chassis ∩ bar = 0.0 mm3  OK
+  chassis ∩ wheel_l = 0.0 mm3  OK
+  chassis ∩ wheel_r = 0.0 mm3  OK
+  bar ∩ wheel_l = 0.0 mm3  OK
+  bar ∩ wheel_r = 0.0 mm3  OK
+  wheel_l ∩ wheel_r = 0.0 mm3  OK
+
+== wedge: Wedge pusher
+  chassis  m=1.280 kg  V=   656.2 cm3  bbox=230x180x53
+  wheel_l  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  wheel_r  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  TOTAL 1.500 kg (limit 1.5 kg) -> OK
+  envelope 230 x 180 x 64 mm; lowest non-wheel point 2.0 mm above the floor -> OK
+  chassis ∩ wheel_l = 0.0 mm3  OK
+  chassis ∩ wheel_r = 0.0 mm3  OK
+  wheel_l ∩ wheel_r = 0.0 mm3  OK
+
+== flipper: Electric flipper
+  chassis  m=1.080 kg  V=   799.1 cm3  bbox=182x192x52
+  plate    m=0.200 kg  V=   126.5 cm3  bbox=118x170x54
+  wheel_l  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  wheel_r  m=0.110 kg  V=    44.9 cm3  bbox=64x18x64
+  TOTAL 1.500 kg (limit 1.5 kg) -> OK
+  envelope 242 x 192 x 64 mm; lowest non-wheel point 2.0 mm above the floor -> OK
+  chassis ∩ plate = 0.0 mm3  OK
+  chassis ∩ wheel_l = 0.0 mm3  OK
+  chassis ∩ wheel_r = 0.0 mm3  OK
+  plate ∩ wheel_l = 0.0 mm3  OK
+  plate ∩ wheel_r = 0.0 mm3  OK
+  wheel_l ∩ wheel_r = 0.0 mm3  OK

@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cakeai-arena"
+version = "1.0.0"
+description = "MuJoCo arena for autonomous 1.5 kg combat robots: CakeAI-V1 vision+control in the loop, CAD robots, broadcast videos"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "George Bondar", email = "47242528+GeBondar@users.noreply.github.com" }]
+requires-python = ">=3.9"
+keywords = ["robotics", "combat-robots", "mujoco", "aruco", "opencv", "simulation", "autonomous"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Robotics",
+]
+dependencies = [
+    "mujoco>=3.1",
+    "opencv-contrib-python>=4.8",
+    "numpy>=1.24",
+    "Pillow>=9.5",
+    "imageio-ffmpeg>=0.4.9",
+]
+
+[project.optional-dependencies]
+play = ["pygame>=2.4"]
+cad = ["cadquery>=2.4"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+cakeai-arena = "arena.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/GeBondar/cakeai-arena"
+"CakeAI-V1 (original)" = "https://github.com/Vlad326/CakeAI-V1"
+
+[tool.setuptools]
+packages = ["arena", "cakeai"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+arena = ["assets/*.png"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["render: needs an OpenGL context (offscreen rendering)"]

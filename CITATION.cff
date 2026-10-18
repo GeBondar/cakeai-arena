@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use CakeAI Arena, please cite it as below."
+title: "CakeAI Arena: a MuJoCo simulator for autonomous 1.5 kg combat robots"
+authors:
+  - family-names: Bondar
+    given-names: George
+    alias: GeBondar
+version: 1.0.0
+date-released: 2026-10-18
+license: Apache-2.0
+repository-code: "https://github.com/GeBondar/cakeai-arena"
+keywords: [robotics, combat robots, MuJoCo, ArUco, OpenCV, autonomous, simulation]
+references:
+  - type: software
+    title: CakeAI-V1
+    authors:
+      - family-names: Kolmogorov
+        given-names: Vlad
+    repository-code: "https://github.com/Vlad326/CakeAI-V1"
+    license: Apache-2.0

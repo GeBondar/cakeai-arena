@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+MUJOCO_LOG.TXT
+
+# simulation runs (curated media lives in media/)
+out/
+
+# reference clone of the original project (see NOTICE / README)
+CakeAI-V1/
+
+# CAD QA renders
+cad/**/render_*.png

@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.stl binary
+*.png binary
+*.gif binary
+*.mp4 binary
+*.step text eol=lf linguist-generated
+cad/robots_1p5kg/robots.json linguist-generated

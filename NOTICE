@@ -1,0 +1,13 @@
+CakeAI Arena
+Copyright 2026 George Bondar (GeBondar)
+
+This product includes a Python port of CakeAI-V1
+(https://github.com/Vlad326/CakeAI-V1), Copyright 2026 Vlad Kolmogorov,
+licensed under the Apache License 2.0. The files in cakeai/ are derived
+from CakeAI-V1's src/ and include/ (control logic, vision, PID, Arduino
+protocol) and were modified to run against a simulator clock and an
+emulated Arduino. configs/cakeai_crashilovo.ini is CakeAI-V1's
+build/config.ini, unmodified.
+
+Simulator approach adapted from GeBondar/battlebots_docs (sim/).
+3D models made with the CADAM code-first CAD method (CadQuery / OpenCascade).
